@@ -10,7 +10,7 @@
 # Gestão Financeira Residencial(GFR)
 
 <!-- Substitua a seguinte imagem por uma logo do seu projeto -->
-<img src="img/logo_gfr_semfundo.png" width="150px">
+<img src="img/logo_gfr_semfundo.png" width="250px">
 
 <!-- Substitua o seguinte parágrafo por um resumo do seu projeto: -->
 Sistema de controle de gastos residenciais, desenvolvido com .NET (Web API) e React com TypeScript, permitindo o gerenciamento de pessoas, categorias e transações financeiras, com cálculo de totais e saldo.
@@ -20,4 +20,4 @@ Sistema de controle de gastos residenciais, desenvolvido com .NET (Web API) e Re
 <!-- Coloque seu nome, uma foto sua e uma pequena bio sobre você na seguinte tabela: -->
 |  |  |
 |:-------------:|:------------------------------------------------------------:|
-|  <img src="img/foto_perfil.png" width="150px"></br> **Anthony Famar** | Nasci em Cuiabá em 22 de junho de 2000. Atualmente, sou estudante de Ciência da Computação e faço estágio como desenvolvedor. Meus dias são preenchidos com estudos para me tornar um programador e tenho como hobby a emoção de andar de moto, sair com amigos e me dedicar à academia. Essa mistura de paixões é o que torna minha jornada única e envolvente. |
+|  <img src="img/foto_perfil.jpg" width="150px"></br> **Anthony Famar** | Nasci em Cuiabá em 22 de junho de 2000. Atualmente, sou estudante de Ciência da Computação e faço estágio como desenvolvedor. Meus dias são preenchidos com estudos para me tornar um programador e tenho como hobby a emoção de andar de moto, sair com amigos e me dedicar à academia. Essa mistura de paixões é o que torna minha jornada única e envolvente. |
