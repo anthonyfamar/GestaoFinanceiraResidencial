@@ -1,0 +1,1 @@
+Esse GFR.Api é a porta de entrada onde recebe requisições HTTP(get, post), retorna JSON e tem controllers.
