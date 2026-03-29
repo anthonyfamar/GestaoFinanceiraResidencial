@@ -1,0 +1,16 @@
+C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Application\bin\Debug\net10.0\GFR.Application.deps.json
+C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Application\bin\Debug\net10.0\GFR.Application.dll
+C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Application\bin\Debug\net10.0\GFR.Application.pdb
+C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Application\bin\Debug\net10.0\GFR.Domain.dll
+C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Application\bin\Debug\net10.0\GFR.Domain.pdb
+C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Application\obj\Debug\net10.0\GFR.Application.csproj.AssemblyReference.cache
+C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Application\obj\Debug\net10.0\GFR.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Application\obj\Debug\net10.0\GFR.Application.AssemblyInfoInputs.cache
+C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Application\obj\Debug\net10.0\GFR.Application.AssemblyInfo.cs
+C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Application\obj\Debug\net10.0\GFR.Application.csproj.CoreCompileInputs.cache
+C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Application\obj\Debug\net10.0\GFR.Application.sourcelink.json
+C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Application\obj\Debug\net10.0\GFR.Appl.DB20666F.Up2Date
+C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Application\obj\Debug\net10.0\GFR.Application.dll
+C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Application\obj\Debug\net10.0\refint\GFR.Application.dll
+C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Application\obj\Debug\net10.0\GFR.Application.pdb
+C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Application\obj\Debug\net10.0\ref\GFR.Application.dll

@@ -18,5 +18,12 @@ namespace GFR.Infrastructure.Data
 
         public DbSet<Transacao> Transacoes { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Transacao>().Property(t => t.Valor).HasColumnType("REAL");
+        }
+
     }
 }
