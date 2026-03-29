@@ -7,6 +7,7 @@ using System.Text;
 namespace GFR.Infrastructure.Data
 {
     //Representação do banco de dados usando Entity Framework Core, onde cada DbSet representa uma tabela, baseada nas entidade do domínio
+    //DbContext = Banco, DbSet = Tabela, Classe = Estrutura da tabela
     public class GfrDbContext : DbContext
     {
         public GfrDbContext(DbContextOptions<GfrDbContext> options) : base(options) { }

@@ -1,6 +1,7 @@
 ﻿using GFR.Domain.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace GFR.Domain.Entities
@@ -10,6 +11,7 @@ namespace GFR.Domain.Entities
     {
         public int Id { get; set; }
 
+        [MaxLength(400)]
         public string Descricao { get; set; } = string.Empty;
 
         public FinalidadeCategoria Finalidade { get; set; }

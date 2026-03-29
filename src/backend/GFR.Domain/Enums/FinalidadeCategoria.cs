@@ -4,6 +4,7 @@ using System.Text;
 
 namespace GFR.Domain.Enums
 {
+    //Define um valor fixo para as finalidades da categoria
     public enum FinalidadeCategoria
     {
         Receita = 1,
