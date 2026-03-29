@@ -1,0 +1,34 @@
+﻿using GFR.Domain.Entities;
+using GFR.Infrastructure.Data;
+using Microsoft.AspNetCore.Mvc;
+
+namespace GFR.Api.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class PessoasController : ControllerBase
+    {
+        private readonly GfrDbContext _context;
+
+        public PessoasController(GfrDbContext context)
+        {
+            _context = context;
+        }
+
+        [HttpPost]
+        public IActionResult RegistrarPessoa(Pessoa pessoa)
+        {
+            _context.Pessoas.Add(pessoa);
+            _context.SaveChanges();
+
+            return Ok(pessoa + " registrado com sucesso.");
+        }
+
+        [HttpGet]
+        public IActionResult ListarPessoas() 
+        {
+            var pessoas = _context.Pessoas.ToList();
+            return Ok(pessoas);
+        }
+    }
+}
