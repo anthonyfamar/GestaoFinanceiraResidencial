@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace GFR.Domain.Enums
+﻿namespace GFR.Domain.Enums
 {
     //Define um valor fixo para as finalidades da categoria
     public enum FinalidadeCategoria

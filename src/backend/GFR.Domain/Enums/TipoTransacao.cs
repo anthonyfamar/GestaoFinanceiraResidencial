@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace GFR.Domain.Enums
+﻿namespace GFR.Domain.Enums
 {
     //Define se uma transação é receita ou despesa atraves de um numero fixo
     public enum TipoTransacao

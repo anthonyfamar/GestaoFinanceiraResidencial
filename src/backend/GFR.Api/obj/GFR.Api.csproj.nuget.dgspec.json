@@ -537,6 +537,9 @@
             "projectReferences": {
               "C:\\Users\\antho\\Documentos\\GitHub\\GestaoFinanceiraResidencial\\src\\backend\\GFR.Domain\\GFR.Domain.csproj": {
                 "projectPath": "C:\\Users\\antho\\Documentos\\GitHub\\GestaoFinanceiraResidencial\\src\\backend\\GFR.Domain\\GFR.Domain.csproj"
+              },
+              "C:\\Users\\antho\\Documentos\\GitHub\\GestaoFinanceiraResidencial\\src\\backend\\GFR.Infrastructure\\GFR.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\antho\\Documentos\\GitHub\\GestaoFinanceiraResidencial\\src\\backend\\GFR.Infrastructure\\GFR.Infrastructure.csproj"
               }
             }
           }

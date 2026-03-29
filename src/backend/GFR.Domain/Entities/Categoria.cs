@@ -1,8 +1,5 @@
 ﻿using GFR.Domain.Enums;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 
 namespace GFR.Domain.Entities
 {

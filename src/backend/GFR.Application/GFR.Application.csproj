@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GFR.Domain\GFR.Domain.csproj" />
+    <ProjectReference Include="..\GFR.Infrastructure\GFR.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

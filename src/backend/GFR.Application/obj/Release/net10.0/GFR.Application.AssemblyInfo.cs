@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GFR.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd2917f32726dd866f5387d898b20a0634741d2c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed49115eacc436b2d5a6a6d3cda4fc20fc707fea")]
 [assembly: System.Reflection.AssemblyProductAttribute("GFR.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GFR.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
