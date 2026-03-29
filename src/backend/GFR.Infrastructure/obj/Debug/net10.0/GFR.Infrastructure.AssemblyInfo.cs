@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GFR.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9371b09bf89a1e5f4a372207525f41d88eb1236")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1213a37026038cd98fece1ec1e6b8728a8585865")]
 [assembly: System.Reflection.AssemblyProductAttribute("GFR.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GFR.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
