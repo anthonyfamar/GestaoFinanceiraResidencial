@@ -5,6 +5,7 @@ using System.Text;
 
 namespace GFR.Domain.Entities
 {
+    //Classe que representa uma transação financeira já com chave estrangeira de pessoa e categoria
     public class Transacao
     {
         public int id { get; set; }
