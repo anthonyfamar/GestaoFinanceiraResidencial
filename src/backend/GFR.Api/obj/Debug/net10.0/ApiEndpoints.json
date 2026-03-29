@@ -1,7 +1,59 @@
 [
   {
+    "ContainingType": "GFR.Api.Controllers.CategoriasController",
+    "Method": "RegistraCategorias",
+    "RelativePath": "api/Categorias",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoria",
+        "Type": "GFR.Domain.Entities.Categoria",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GFR.Api.Controllers.CategoriasController",
+    "Method": "ListarCategorias",
+    "RelativePath": "api/Categorias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GFR.Api.Controllers.PessoasController",
+    "Method": "RegistrarPessoa",
+    "RelativePath": "api/Pessoas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pessoa",
+        "Type": "GFR.Domain.Entities.Pessoa",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GFR.Api.Controllers.PessoasController",
+    "Method": "ListarPessoas",
+    "RelativePath": "api/Pessoas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GFR.Api.Controllers.TransacoesController",
-    "Method": "Post",
+    "Method": "RegistrarTransacao",
     "RelativePath": "api/Transacoes",
     "HttpMethod": "POST",
     "IsController": true,

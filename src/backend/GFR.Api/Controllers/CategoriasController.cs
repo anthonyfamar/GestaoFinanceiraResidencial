@@ -21,7 +21,7 @@ namespace GFR.Api.Controllers
             _context.Categorias.Add(categoria);
             _context.SaveChanges();
 
-            return Ok(categoria + " registrada com sucesso.");
+            return Ok("Categoria registrada com sucesso.");
         }
 
         [HttpGet]

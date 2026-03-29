@@ -21,7 +21,7 @@ namespace GFR.Api.Controllers
             _context.Pessoas.Add(pessoa);
             _context.SaveChanges();
 
-            return Ok(pessoa + " registrado com sucesso.");
+            return Ok("Pessoa registrada com sucesso.");
         }
 
         [HttpGet]
