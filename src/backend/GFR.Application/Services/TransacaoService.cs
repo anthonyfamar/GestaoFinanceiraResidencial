@@ -6,6 +6,7 @@ namespace GFR.Application.Services
 {
     public class TransacaoService
     {
+        //Injeção do dbcontext, onde o serviço recebe o acesso ao banco
         private readonly GfrDbContext _context;
 
         public TransacaoService(GfrDbContext context)
@@ -47,6 +48,7 @@ namespace GFR.Application.Services
                     break;
             }
 
+            //Salva no banco
             _context.Transacoes.Add(transacao);
             _context.SaveChanges();
         }
