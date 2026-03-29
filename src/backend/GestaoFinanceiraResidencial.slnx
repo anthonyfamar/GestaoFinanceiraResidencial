@@ -1,1 +1,6 @@
-<Solution />
+<Solution>
+  <Project Path="GFR.Api/GFR.Api.csproj" Id="df9ef4c3-f848-4bd7-bdb3-27b6affd7f3c" />
+  <Project Path="GFR.Application/GFR.Application.csproj" Id="bec08b31-f0ea-4b1e-b7e7-db2d4db97259" />
+  <Project Path="GFR.Domain/GFR.Domain.csproj" Id="c889869d-d2b7-48a9-ae05-1c824fcc314a" />
+  <Project Path="GFR.Infrastructure/GFR.Infrastructure.csproj" Id="2fcda730-e577-4fea-a2c7-7d8167db68b7" />
+</Solution>

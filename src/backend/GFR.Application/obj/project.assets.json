@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "GFR.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/GFR.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GFR.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "GFR.Domain/1.0.0": {
+      "type": "project",
+      "path": "../GFR.Domain/GFR.Domain.csproj",
+      "msbuildProject": "../GFR.Domain/GFR.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "GFR.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\antho\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\antho\\Documentos\\GitHub\\GestaoFinanceiraResidencial\\src\\backend\\GFR.Domain\\GFR.Domain.csproj": {
+              "projectPath": "C:\\Users\\antho\\Documentos\\GitHub\\GestaoFinanceiraResidencial\\src\\backend\\GFR.Domain\\GFR.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

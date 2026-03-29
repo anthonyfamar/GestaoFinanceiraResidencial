@@ -36,6 +36,42 @@
             "related": ".pdb;.xml"
           }
         }
+      },
+      "GFR.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "GFR.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GFR.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GFR.Application.dll": {}
+        }
+      },
+      "GFR.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/GFR.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GFR.Domain.dll": {}
+        }
+      },
+      "GFR.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "GFR.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GFR.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GFR.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -75,10 +111,27 @@
         "microsoft.openapi.2.0.0.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
+    },
+    "GFR.Application/1.0.0": {
+      "type": "project",
+      "path": "../GFR.Application/GFR.Application.csproj",
+      "msbuildProject": "../GFR.Application/GFR.Application.csproj"
+    },
+    "GFR.Domain/1.0.0": {
+      "type": "project",
+      "path": "../GFR.Domain/GFR.Domain.csproj",
+      "msbuildProject": "../GFR.Domain/GFR.Domain.csproj"
+    },
+    "GFR.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../GFR.Infrastructure/GFR.Infrastructure.csproj",
+      "msbuildProject": "../GFR.Infrastructure/GFR.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "GFR.Application >= 1.0.0",
+      "GFR.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 10.0.5"
     ]
   },
@@ -114,7 +167,14 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\antho\\Documentos\\GitHub\\GestaoFinanceiraResidencial\\src\\backend\\GFR.Application\\GFR.Application.csproj": {
+              "projectPath": "C:\\Users\\antho\\Documentos\\GitHub\\GestaoFinanceiraResidencial\\src\\backend\\GFR.Application\\GFR.Application.csproj"
+            },
+            "C:\\Users\\antho\\Documentos\\GitHub\\GestaoFinanceiraResidencial\\src\\backend\\GFR.Infrastructure\\GFR.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\antho\\Documentos\\GitHub\\GestaoFinanceiraResidencial\\src\\backend\\GFR.Infrastructure\\GFR.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
