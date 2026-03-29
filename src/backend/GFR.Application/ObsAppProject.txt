@@ -1,0 +1,1 @@
+Aqui no GRF.Application fica a lógica do sistema(validações, calculos, etc).

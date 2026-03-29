@@ -1,4 +1,4 @@
-Aqui ficam as entidades e regras base(Pessoa, Categoria, transação, enum)
+Aqui no GFR.Domain ficam as entidades e regras base(Pessoa, Categoria, transação, enum)
 
 
 pasta entities: tabelas do sistema

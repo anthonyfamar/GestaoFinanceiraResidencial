@@ -1,0 +1,1 @@
+Aqui no GRF.Infrastructure ficam as implementações de acesso a dados, como repositórios, contextos de banco de dados, etc.
