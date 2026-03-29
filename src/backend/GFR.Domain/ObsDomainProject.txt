@@ -1,0 +1,5 @@
+Aqui ficam as entidades e regras base(Pessoa, Categoria, transação, enum)
+
+
+pasta entities: tabelas do sistema
+pasta Enums: tipos fixos(despesa/receita)
