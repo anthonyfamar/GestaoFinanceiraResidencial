@@ -30,9 +30,6 @@ namespace GFR.Api.Controllers
         {
             var pessoa = ObterPessoa(id);
 
-            if (pessoa == null)
-                return NotFound("Pessoa não encontrada");
-
             pessoa.Nome = pessoaEditada.Nome;
             pessoa.Idade = pessoaEditada.Idade;
 
@@ -45,9 +42,6 @@ namespace GFR.Api.Controllers
         public IActionResult Deletar(int id)
         {
             var pessoa = ObterPessoa(id);
-
-            if (pessoa == null)
-                return NotFound("Pessoa não encontrada.");
            
             //remove as transações da pessoas em especifico
             var transacoes = _context.Transacoes.Where(t => t.PessoaId == id).ToList(); 
@@ -67,9 +61,14 @@ namespace GFR.Api.Controllers
             return Ok(pessoas);
         }
 
-        private Pessoa? ObterPessoa(int id)
+        private Pessoa ObterPessoa(int id)
         {
-            return _context.Pessoas.Find(id);
+            var pessoa = _context.Pessoas.Find(id);
+
+            if (pessoa == null)
+                throw new Exception("Pessoa não encontrada.");
+
+            return pessoa;
         }
     }
 }
