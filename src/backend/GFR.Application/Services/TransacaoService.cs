@@ -17,7 +17,7 @@ namespace GFR.Application.Services
         {
             //Regra 1: Valor sempre positivo
             if (transacao.Valor <= 0)
-                throw new Exception("Valor deve ser maior que zero.");
+                throw new InvalidOperationException("Valor deve ser maior que zero.");
 
             //Validações
             var pessoa = _context.Pessoas.Find(transacao.PessoaId);
@@ -39,11 +39,11 @@ namespace GFR.Application.Services
                     break; //sempre compatível
                 case FinalidadeCategoria.Receita:
                     if (transacao.Tipo != TipoTransacao.Receita)
-                        throw new Exception("Categoria não compatível!");
+                        throw new Exception("Categoria não compatível com o tipo da transação.");
                     break;
                 case FinalidadeCategoria.Despesa:
                     if (transacao.Tipo != TipoTransacao.Despesa)
-                        throw new Exception("Categoria não compatível!");
+                        throw new Exception("Categoria não compatível com o tipo da transação.");
                     break;
             }
 
