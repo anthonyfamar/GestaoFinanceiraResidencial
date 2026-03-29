@@ -16,7 +16,7 @@ namespace GFR.Api.Controllers
         }
 
         [HttpPost]
-        public IActionResult RegistraCategorias(Categoria categoria)
+        public IActionResult Criar(Categoria categoria)
         {
             _context.Categorias.Add(categoria);
             _context.SaveChanges();
@@ -25,7 +25,7 @@ namespace GFR.Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult ListarCategorias()
+        public IActionResult Listar()
         {
             var categorias = _context.Categorias.ToList();
             return Ok(categorias);

@@ -17,7 +17,7 @@ namespace GFR.Api.Controllers
         }
 
         [HttpPost]
-        public IActionResult RegistrarTransacao([FromBody] Transacao transacao)
+        public IActionResult Criar([FromBody] Transacao transacao)
         {
             try
             {

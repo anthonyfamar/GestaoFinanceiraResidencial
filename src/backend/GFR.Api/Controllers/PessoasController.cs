@@ -16,7 +16,7 @@ namespace GFR.Api.Controllers
         }
 
         [HttpPost]
-        public IActionResult RegistrarPessoa(Pessoa pessoa)
+        public IActionResult Criar(Pessoa pessoa)
         {
             _context.Pessoas.Add(pessoa);
             _context.SaveChanges();
@@ -25,7 +25,7 @@ namespace GFR.Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult ListarPessoas() 
+        public IActionResult Listar() 
         {
             var pessoas = _context.Pessoas.ToList();
             return Ok(pessoas);
