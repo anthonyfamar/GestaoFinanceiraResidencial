@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\antho\\Documentos\\GitHub\\GestaoFinanceiraResidencial\\src\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DF9EF4C3-F848-4BD7-BDB3-27B6AFFD7F3C}|GFR.Api\\GFR.Api.csproj|c:\\users\\antho\\documentos\\github\\gestaofinanceiraresidencial\\src\\backend\\gfr.api\\controllers\\pessoascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF9EF4C3-F848-4BD7-BDB3-27B6AFFD7F3C}|GFR.Api\\GFR.Api.csproj|solutionrelative:gfr.api\\controllers\\pessoascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BEC08B31-F0EA-4B1E-B7E7-DB2D4DB97259}|GFR.Application\\GFR.Application.csproj|c:\\users\\antho\\documentos\\github\\gestaofinanceiraresidencial\\src\\backend\\gfr.application\\services\\transacaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEC08B31-F0EA-4B1E-B7E7-DB2D4DB97259}|GFR.Application\\GFR.Application.csproj|solutionrelative:gfr.application\\services\\transacaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF9EF4C3-F848-4BD7-BDB3-27B6AFFD7F3C}|GFR.Api\\GFR.Api.csproj|c:\\users\\antho\\documentos\\github\\gestaofinanceiraresidencial\\src\\backend\\gfr.api\\controllers\\transacoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF9EF4C3-F848-4BD7-BDB3-27B6AFFD7F3C}|GFR.Api\\GFR.Api.csproj|solutionrelative:gfr.api\\controllers\\transacoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BEC08B31-F0EA-4B1E-B7E7-DB2D4DB97259}|GFR.Application\\GFR.Application.csproj|c:\\users\\antho\\documentos\\github\\gestaofinanceiraresidencial\\src\\backend\\gfr.application\\services\\transacaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BEC08B31-F0EA-4B1E-B7E7-DB2D4DB97259}|GFR.Application\\GFR.Application.csproj|solutionrelative:gfr.application\\services\\transacaoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DF9EF4C3-F848-4BD7-BDB3-27B6AFFD7F3C}|GFR.Api\\GFR.Api.csproj|c:\\users\\antho\\documentos\\github\\gestaofinanceiraresidencial\\src\\backend\\gfr.api\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF9EF4C3-F848-4BD7-BDB3-27B6AFFD7F3C}|GFR.Api\\GFR.Api.csproj|solutionrelative:gfr.api\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF9EF4C3-F848-4BD7-BDB3-27B6AFFD7F3C}|GFR.Api\\GFR.Api.csproj|c:\\users\\antho\\documentos\\github\\gestaofinanceiraresidencial\\src\\backend\\gfr.api\\controllers\\pessoascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF9EF4C3-F848-4BD7-BDB3-27B6AFFD7F3C}|GFR.Api\\GFR.Api.csproj|solutionrelative:gfr.api\\controllers\\pessoascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C889869D-D2B7-48A9-AE05-1C824FCC314A}|GFR.Domain\\GFR.Domain.csproj|c:\\users\\antho\\documentos\\github\\gestaofinanceiraresidencial\\src\\backend\\gfr.domain\\entities\\transacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,30 +34,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "CategoriasController.cs",
               "DocumentMoniker": "C:\\Users\\antho\\Documentos\\GitHub\\GestaoFinanceiraResidencial\\src\\backend\\GFR.Api\\Controllers\\CategoriasController.cs",
               "RelativeDocumentMoniker": "GFR.Api\\Controllers\\CategoriasController.cs",
               "ToolTip": "C:\\Users\\antho\\Documentos\\GitHub\\GestaoFinanceiraResidencial\\src\\backend\\GFR.Api\\Controllers\\CategoriasController.cs",
               "RelativeToolTip": "GFR.Api\\Controllers\\CategoriasController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-29T22:46:27.162Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "PessoasController.cs",
               "DocumentMoniker": "C:\\Users\\antho\\Documentos\\GitHub\\GestaoFinanceiraResidencial\\src\\backend\\GFR.Api\\Controllers\\PessoasController.cs",
               "RelativeDocumentMoniker": "GFR.Api\\Controllers\\PessoasController.cs",
               "ToolTip": "C:\\Users\\antho\\Documentos\\GitHub\\GestaoFinanceiraResidencial\\src\\backend\\GFR.Api\\Controllers\\PessoasController.cs",
               "RelativeToolTip": "GFR.Api\\Controllers\\PessoasController.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAiwE8AAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-29T22:39:24.349Z",
               "EditorCaption": ""
@@ -83,20 +83,20 @@
               "RelativeDocumentMoniker": "GFR.Api\\Controllers\\TransacoesController.cs",
               "ToolTip": "C:\\Users\\antho\\Documentos\\GitHub\\GestaoFinanceiraResidencial\\src\\backend\\GFR.Api\\Controllers\\TransacoesController.cs",
               "RelativeToolTip": "GFR.Api\\Controllers\\TransacoesController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-29T20:11:07.304Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "TransacaoService.cs",
               "DocumentMoniker": "C:\\Users\\antho\\Documentos\\GitHub\\GestaoFinanceiraResidencial\\src\\backend\\GFR.Application\\Services\\TransacaoService.cs",
               "RelativeDocumentMoniker": "GFR.Application\\Services\\TransacaoService.cs",
               "ToolTip": "C:\\Users\\antho\\Documentos\\GitHub\\GestaoFinanceiraResidencial\\src\\backend\\GFR.Application\\Services\\TransacaoService.cs",
               "RelativeToolTip": "GFR.Application\\Services\\TransacaoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAArwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-29T20:02:35.011Z",
               "EditorCaption": ""

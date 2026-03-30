@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "GFR.Api.Controllers.CategoriasController",
-    "Method": "RegistraCategorias",
+    "Method": "Criar",
     "RelativePath": "api/Categorias",
     "HttpMethod": "POST",
     "IsController": true,
@@ -17,7 +17,7 @@
   },
   {
     "ContainingType": "GFR.Api.Controllers.CategoriasController",
-    "Method": "ListarCategorias",
+    "Method": "Listar",
     "RelativePath": "api/Categorias",
     "HttpMethod": "GET",
     "IsController": true,
@@ -27,7 +27,7 @@
   },
   {
     "ContainingType": "GFR.Api.Controllers.PessoasController",
-    "Method": "RegistrarPessoa",
+    "Method": "Criar",
     "RelativePath": "api/Pessoas",
     "HttpMethod": "POST",
     "IsController": true,
@@ -43,7 +43,7 @@
   },
   {
     "ContainingType": "GFR.Api.Controllers.PessoasController",
-    "Method": "ListarPessoas",
+    "Method": "Listar",
     "RelativePath": "api/Pessoas",
     "HttpMethod": "GET",
     "IsController": true,
@@ -52,8 +52,55 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GFR.Api.Controllers.PessoasController",
+    "Method": "Editar",
+    "RelativePath": "api/Pessoas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "pessoaEditada",
+        "Type": "GFR.Domain.Entities.Pessoa",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GFR.Api.Controllers.PessoasController",
+    "Method": "Deletar",
+    "RelativePath": "api/Pessoas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GFR.Api.Controllers.PessoasController",
+    "Method": "TotaisPorPessoa",
+    "RelativePath": "api/Pessoas/totais",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GFR.Api.Controllers.TransacoesController",
-    "Method": "RegistrarTransacao",
+    "Method": "Criar",
     "RelativePath": "api/Transacoes",
     "HttpMethod": "POST",
     "IsController": true,
