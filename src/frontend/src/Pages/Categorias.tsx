@@ -11,6 +11,11 @@ export function Categorias() {
     const [categorias, setCategorias] = useState<Categoria[]>([]);
     const [descricao, setDescricao] = useState("");
     const [finalidade, setFinalidade] = useState(0);
+    const finalidadeMap: Record<number, string> = {
+        1: "Receita",
+        2: "Despesa",
+        3: "Ambas"
+    };
 
     async function carregar() {
         const res = await api.get("/categorias");
@@ -43,15 +48,18 @@ export function Categorias() {
                 onChange={e => setDescricao(e.target.value)}
             />
             <select value={finalidade} onChange={e => setFinalidade(Number(e.target.value))}>
-                <option value={1}>Receita</option>
-                <option value={2}>Despesa</option>
+                {Object.entries(finalidadeMap).map(([key, value]) => (
+                    <option key={key} value={key}>
+                        {value}
+                    </option>
+                ))}
             </select>
             <button onClick={criar}>Criar</button>
 
             <ul>
                 {categorias.map(c => (
                     <li key={c.id}>
-                        {c.descricao} - {c.finalidade === 1 ? "Receita" : "Despesa"}
+                        {c.descricao} - {finalidadeMap[c.finalidade]}
                         <button onClick={() => deletar(c.id)}>Excluir</button>
                     </li>
                 ))}
