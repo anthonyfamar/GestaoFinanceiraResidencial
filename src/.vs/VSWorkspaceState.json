@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\backend",
-    "\\frontend"
+    "\\frontend\\src",
+    "\\frontend\\src\\pages",
+    "\\frontend\\src\\services"
   ],
-  "SelectedNode": "\\backend\\GestaoFinanceiraResidencial.slnx",
+  "SelectedNode": "\\frontend",
   "PreviewInSolutionExplorer": false
 }
