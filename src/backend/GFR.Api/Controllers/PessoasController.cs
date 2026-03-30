@@ -91,16 +91,12 @@ namespace GFR.Api.Controllers
                 //Filtra a transação por pessoa do tipo receita e soma o valor, se não tiver nenhuma transação do tipo receita, retorna 0
                 var somaReceitas = _context.Transacoes
                     .Where(t => t.PessoaId == pessoa.Id && t.Tipo == TipoTransacao.Receita)
-                    .Select(t => t.Valor)
-                    .DefaultIfEmpty(0)
-                    .Sum();
+                    .Sum(t => t.Valor);
 
                 //Filtra a transação por pessoa, tipo despesa e soma o valor
                 var somaDespesas = _context.Transacoes
                     .Where(t => t.PessoaId == pessoa.Id && t.Tipo == TipoTransacao.Despesa)
-                    .Select(t => t.Valor)
-                    .DefaultIfEmpty(0)
-                    .Sum();
+                    .Sum(t => t.Valor);
 
                 var saldo = somaReceitas - somaDespesas;
 

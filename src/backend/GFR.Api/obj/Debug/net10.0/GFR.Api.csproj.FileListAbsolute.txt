@@ -64,7 +64,6 @@ C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Api
 C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Api\obj\Debug\net10.0\staticwebassets.development.json
 C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Api\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Api\obj\Debug\net10.0\swae.build.ex.cache
-C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Api\obj\Debug\net10.0\GFR.Api.csproj.Up2Date
 C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Api\obj\Debug\net10.0\GFR.Api.dll
 C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Api\obj\Debug\net10.0\refint\GFR.Api.dll
@@ -157,3 +156,4 @@ C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Api
 C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\antho\Documentos\GitHub\GestaoFinanceiraResidencial\src\backend\GFR.Api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
