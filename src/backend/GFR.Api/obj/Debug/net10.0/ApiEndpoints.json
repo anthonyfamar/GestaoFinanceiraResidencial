@@ -26,6 +26,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GFR.Api.Controllers.CategoriasController",
+    "Method": "Deletar",
+    "RelativePath": "api/Categorias/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GFR.Api.Controllers.PessoasController",
     "Method": "Criar",
     "RelativePath": "api/Pessoas",

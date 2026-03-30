@@ -3,12 +3,14 @@ import { api } from "../Services/api";
 
 type Categoria = {
     id: number;
-    nome: string;
+    descricao: string;
+    finalidade: number;
 };
 
 export function Categorias() {
     const [categorias, setCategorias] = useState<Categoria[]>([]);
-    const [nome, setNome] = useState("");
+    const [descricao, setDescricao] = useState("");
+    const [finalidade, setFinalidade] = useState(0);
 
     async function carregar() {
         const res = await api.get("/categorias");
@@ -16,8 +18,9 @@ export function Categorias() {
     }
 
     async function criar() {
-        await api.post("/categorias", { nome });
-        setNome("");
+        await api.post("/categorias", { descricao, finalidade });
+        setDescricao("");
+        setFinalidade(0);
         carregar();
     }
 
@@ -36,15 +39,19 @@ export function Categorias() {
 
             <input
                 placeholder="Nome"
-                value={nome}
-                onChange={e => setNome(e.target.value)}
+                value={descricao}
+                onChange={e => setDescricao(e.target.value)}
             />
+            <select value={finalidade} onChange={e => setFinalidade(Number(e.target.value))}>
+                <option value={1}>Receita</option>
+                <option value={2}>Despesa</option>
+            </select>
             <button onClick={criar}>Criar</button>
 
             <ul>
                 {categorias.map(c => (
                     <li key={c.id}>
-                        {c.nome}
+                        {c.descricao} - {c.finalidade === 1 ? "Receita" : "Despesa"}
                         <button onClick={() => deletar(c.id)}>Excluir</button>
                     </li>
                 ))}

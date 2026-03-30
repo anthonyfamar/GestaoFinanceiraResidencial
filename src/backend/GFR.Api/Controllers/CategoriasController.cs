@@ -10,7 +10,7 @@ namespace GFR.Api.Controllers
     {
         private readonly GfrDbContext _context;
 
-        public CategoriasController(GfrDbContext context) 
+        public CategoriasController(GfrDbContext context)
         {
             _context = context;
         }
@@ -22,6 +22,21 @@ namespace GFR.Api.Controllers
             _context.SaveChanges();
 
             return Ok("Categoria registrada com sucesso.");
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Deletar(int id)
+        {
+            var categoria = _context.Categorias.Find(id);
+
+            if (categoria == null)
+                throw new Exception("Categoria não encontrada.");
+
+            //remove a categoria
+            _context.Categorias.Remove(categoria);
+
+            _context.SaveChanges();
+            return Ok("Categoria removida com sucesso.");
         }
 
         [HttpGet]
