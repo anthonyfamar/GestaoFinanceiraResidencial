@@ -28,30 +28,44 @@ namespace GFR.Api.Controllers
         [HttpPut("{id}")]
         public IActionResult Editar(int id, Pessoa pessoaEditada)
         {
-            var pessoa = ObterPessoa(id);
+            try
+            {
+                var pessoa = ObterPessoa(id);
 
-            pessoa.Nome = pessoaEditada.Nome;
-            pessoa.Idade = pessoaEditada.Idade;
+                pessoa.Nome = pessoaEditada.Nome;
+                pessoa.Idade = pessoaEditada.Idade;
 
-            _context.SaveChanges();
+                _context.SaveChanges();
 
-            return Ok(pessoa);
+                return Ok(pessoa);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
         {
-            var pessoa = ObterPessoa(id);
-           
-            //remove as transações da pessoas em especifico
-            var transacoes = _context.Transacoes.Where(t => t.PessoaId == id).ToList(); 
-            _context.Transacoes.RemoveRange(transacoes);
+            try
+            {
+                var pessoa = ObterPessoa(id);
 
-            //remove a pessoa
-            _context.Pessoas.Remove(pessoa);
+                //remove as transações da pessoas em especifico
+                var transacoes = _context.Transacoes.Where(t => t.PessoaId == id).ToList();
+                _context.Transacoes.RemoveRange(transacoes);
 
-            _context.SaveChanges();
-            return Ok("Pessoa e suas transações removidas com sucesso.");
+                //remove a pessoa
+                _context.Pessoas.Remove(pessoa);
+
+                _context.SaveChanges();
+                return Ok("Pessoa e suas transações removidas com sucesso.");
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
         [HttpGet]
