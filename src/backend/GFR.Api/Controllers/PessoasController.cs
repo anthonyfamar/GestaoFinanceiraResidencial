@@ -1,4 +1,5 @@
 ﻿using GFR.Domain.Entities;
+using GFR.Domain.Enums;
 using GFR.Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 
@@ -69,10 +70,66 @@ namespace GFR.Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult Listar() 
+        public IActionResult Listar()
         {
-            var pessoas = _context.Pessoas.ToList();
+            var pessoas = ObterListaDePessoas();
             return Ok(pessoas);
+        }
+
+        [HttpGet("totais")]
+        public IActionResult TotaisPorPessoa()
+        {
+            var pessoas = ObterListaDePessoas();
+            var resultado = new List<object>();
+
+            decimal totalGeralReceita = 0;
+            decimal totalGeralDespesa = 0;
+
+            //for each para cada pessoa
+            foreach (var pessoa in pessoas)
+            {
+                //Filtra a transação por pessoa do tipo receita e soma o valor, se não tiver nenhuma transação do tipo receita, retorna 0
+                var somaReceitas = _context.Transacoes
+                    .Where(t => t.PessoaId == pessoa.Id && t.Tipo == TipoTransacao.Receita)
+                    .Select(t => t.Valor)
+                    .DefaultIfEmpty(0)
+                    .Sum();
+
+                //Filtra a transação por pessoa, tipo despesa e soma o valor
+                var somaDespesas = _context.Transacoes
+                    .Where(t => t.PessoaId == pessoa.Id && t.Tipo == TipoTransacao.Despesa)
+                    .Select(t => t.Valor)
+                    .DefaultIfEmpty(0)
+                    .Sum();
+
+                var saldo = somaReceitas - somaDespesas;
+
+                totalGeralReceita += somaReceitas;
+                totalGeralDespesa += somaDespesas;
+
+                //monta o resultado da pessoa
+                resultado.Add(new
+                {
+                    PessoaId = pessoa.Id,
+                    Nome = pessoa.Nome,
+                    Receitas = somaReceitas,
+                    Despesas = somaDespesas,
+                    Saldo = saldo
+                });
+            }
+
+            var totalGeral = new
+            {
+                TotalReceitas = totalGeralReceita,
+                TotalDespesas = totalGeralDespesa,
+                SaldoGeral = totalGeralReceita - totalGeralDespesa
+            };
+
+            return Ok(new
+            {
+                Pessoas = resultado,
+                TotalGeral = totalGeral
+            });
         }
 
         private Pessoa ObterPessoa(int id)
@@ -83,6 +140,11 @@ namespace GFR.Api.Controllers
                 throw new Exception("Pessoa não encontrada.");
 
             return pessoa;
+        }
+
+        private List<Pessoa> ObterListaDePessoas()
+        {
+            return _context.Pessoas.ToList();
         }
     }
 }
