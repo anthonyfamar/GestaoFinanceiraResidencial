@@ -8,7 +8,7 @@ type Pessoa = {
 
 type Categoria = {
     id: number;
-    nome: string;
+    descricao: string;
 };
 
 type Transacao = {
@@ -42,6 +42,11 @@ export function Transacoes() {
     }
 
     async function criar() {
+        if (!pessoaId || !categoriaId) {
+            alert("Selecione pessoa e categoria");
+            return;
+        }
+
         await api.post("/transacoes", {
             valor,
             tipo,
@@ -68,21 +73,21 @@ export function Transacoes() {
             <input type="number" placeholder="Valor" onChange={e => setValor(Number(e.target.value))} />
 
             <select onChange={e => setTipo(Number(e.target.value))}>
-                <option value={0}>Despesa</option>
                 <option value={1}>Receita</option>
+                <option value={2}>Despesa</option>
             </select>
 
             <select onChange={e => setPessoaId(Number(e.target.value))}>
-                <option>Selecione Pessoa</option>
+                <option value={0}>Selecione Pessoa</option>
                 {pessoas.map(p => (
                     <option key={p.id} value={p.id}>{p.nome}</option>
                 ))}
             </select>
 
             <select onChange={e => setCategoriaId(Number(e.target.value))}>
-                <option>Selecione Categoria</option>
+                <option value={0}>Selecione Categoria</option>
                 {categorias.map(c => (
-                    <option key={c.id} value={c.id}>{c.nome}</option>
+                    <option key={c.id} value={c.id}>{c.descricao}</option>
                 ))}
             </select>
 
@@ -91,7 +96,7 @@ export function Transacoes() {
             <ul>
                 {transacoes.map(t => (
                     <li key={t.id}>
-                        {t.valor} - {t.tipo === 0 ? "Despesa" : "Receita"}
+                        {t.valor} - {t.tipo === 1 ? "Receita" : "Despesa"}
                         <button onClick={() => deletar(t.id)}>Excluir</button>
                     </li>
                 ))}

@@ -29,5 +29,26 @@ namespace GFR.Api.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet]
+        public IActionResult Listar()
+        {
+            var pessoas = _service.Listar();
+            return Ok(pessoas);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Deletar(int id)
+        {
+            try
+            {
+                _service.Deletar(id);
+                return Ok("Transação deletada com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

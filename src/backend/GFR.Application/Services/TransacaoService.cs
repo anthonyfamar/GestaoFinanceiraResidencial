@@ -52,5 +52,23 @@ namespace GFR.Application.Services
             _context.Transacoes.Add(transacao);
             _context.SaveChanges();
         }
+
+        public List<Transacao> Listar()
+        {
+            return _context.Transacoes.ToList();
+        }
+
+        public void Deletar(int id)
+        {
+            var transacao = _context.Transacoes.Find(id);
+
+            if (transacao == null)
+                throw new Exception("Transacao não encontrada.");
+
+            //remove a categoria
+            _context.Transacoes.Remove(transacao);
+
+            _context.SaveChanges();
+        }
     }
 }
