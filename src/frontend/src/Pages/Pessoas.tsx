@@ -66,6 +66,9 @@ export function Pessoas() {
                     ))}
                 </tbody>
             </table>
+            <div style={{ marginTop: "15px" }}>
+                ⚠ Deletar uma pessoa remove todas as suas transações.
+            </div>
         </div>
     );
 }
