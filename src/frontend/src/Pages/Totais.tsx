@@ -5,10 +5,12 @@ export function Totais() {
     const [dados, setDados] = useState<any>(null);
 
     async function carregar() {
+        //pega os dados do backend e salva
         const res = await api.get("/pessoas/totais");
         setDados(res.data);
     }
 
+    //executa ao carregar a página
     useEffect(() => {
         carregar();
     }, []);
@@ -17,6 +19,7 @@ export function Totais() {
 
     return (
         <div>
+        {/*2 tipos de listagem/consultas*/}
             <h2>Totais por Pessoa</h2>
 
             <ul>

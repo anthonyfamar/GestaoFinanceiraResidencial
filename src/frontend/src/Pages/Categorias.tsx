@@ -8,9 +8,12 @@ type Categoria = {
 };
 
 export function Categorias() {
+    //estado principal de como vem do backend
     const [categorias, setCategorias] = useState<Categoria[]>([]);
     const [descricao, setDescricao] = useState("");
     const [finalidade, setFinalidade] = useState(0);
+
+    //fiz outro mapeamento por ser um tipo padrão fixo
     const finalidadeMap: Record<number, string> = {
         1: "Receita",
         2: "Despesa",

@@ -1,12 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\backend",
     "\\frontend",
     "\\frontend\\public",
     "\\frontend\\src",
     "\\frontend\\src\\Pages",
     "\\frontend\\src\\Services"
   ],
-  "SelectedNode": "\\frontend\\src\\Pages\\Categorias.tsx",
+  "SelectedNode": "\\backend\\GestaoFinanceiraResidencial.slnx",
   "PreviewInSolutionExplorer": false
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { api } from "../Services/api";
 
+//aqui é onde define os tipos de dados que vem do backend
 type Pessoa = {
     id: number;
     nome: string;
@@ -20,19 +21,24 @@ type Transacao = {
 };
 
 export function Transacoes() {
+    //estado principal de como vem do backend
     const [transacoes, setTransacoes] = useState<Transacao[]>([]);
     const [pessoas, setPessoas] = useState<Pessoa[]>([]);
     const [categorias, setCategorias] = useState<Categoria[]>([]);
 
+    //estado do form q é como usuario digita ou seleciona
     const [valor, setValor] = useState(0);
-    const [tipo, setTipo] = useState(1);
+    const [tipo, setTipo] = useState(1); // coloquei pra iniciar como receita
     const [pessoaId, setPessoaId] = useState(0);
     const [categoriaId, setCategoriaId] = useState(0);
+
+    //fiz um mapeamento por ser um tipo padrão fixo
     const tipoMap: Record<number, string> = {
         1: "Receita",
         2: "Despesa"
     };
 
+    //Faz requisição para o backend pegando os dados
     async function carregar() {
         const [t, p, c] = await Promise.all([
             api.get("/transacoes"),
@@ -40,6 +46,7 @@ export function Transacoes() {
             api.get("/categorias")
         ]);
 
+        //salva os dados
         setTransacoes(t.data);
         setPessoas(p.data);
         setCategorias(c.data);
@@ -51,6 +58,7 @@ export function Transacoes() {
             return;
         }
 
+        //envia os dados para o backend
         await api.post("/transacoes", {
             valor,
             tipo,
@@ -58,6 +66,7 @@ export function Transacoes() {
             categoriaId
         });
 
+        //aqui recarregaa a lista atualizada
         carregar();
     }
 
@@ -66,6 +75,7 @@ export function Transacoes() {
         carregar();
     }
 
+    //executa ao carregar a página
     useEffect(() => {
         carregar();
     }, []);
@@ -74,6 +84,7 @@ export function Transacoes() {
         <div>
             <h2>Transações</h2>
 
+            {/*form para preencher*/}
             <input type="number" placeholder="Valor" onChange={e => setValor(Number(e.target.value))} />
 
             <select value={tipo} onChange={e => setTipo(Number(e.target.value))}>
@@ -100,6 +111,7 @@ export function Transacoes() {
 
             <button onClick={criar}>Criar</button>
 
+            {/*lista com o botão de excluir*/}
             <ul>
                 {transacoes.map(t => (
                     <li key={t.id}>
