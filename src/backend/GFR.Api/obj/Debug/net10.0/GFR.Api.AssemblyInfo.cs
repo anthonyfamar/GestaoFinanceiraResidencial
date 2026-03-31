@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GFR.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d84892aa10f50ed5c2c00631e772e890a1c02a10")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48b43223c9e8671824a8212b3deb16770e41660d")]
 [assembly: System.Reflection.AssemblyProductAttribute("GFR.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GFR.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

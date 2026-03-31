@@ -62,6 +62,9 @@ namespace GFR.Api.Controllers
                     .Where(t => t.CategoriaId == categoria.Id && t.Tipo == TipoTransacao.Despesa)
                     .Sum(t => t.Valor);
 
+                if (somaReceitas == 0 && somaDespesas == 0)
+                    continue;
+
                 var saldo = somaReceitas - somaDespesas;
 
                 totalGeralReceita += somaReceitas;
