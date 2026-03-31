@@ -42,6 +42,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GFR.Api.Controllers.CategoriasController",
+    "Method": "TotaisPorCategoria",
+    "RelativePath": "api/Categorias/totais",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GFR.Api.Controllers.PessoasController",
     "Method": "Criar",
     "RelativePath": "api/Pessoas",

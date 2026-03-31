@@ -69,6 +69,18 @@
         }
       }
     },
+    "/api/Categorias/totais": {
+      "get": {
+        "tags": [
+          "Categorias"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Pessoas": {
       "post": {
         "tags": [

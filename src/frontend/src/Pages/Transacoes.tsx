@@ -81,9 +81,7 @@ export function Transacoes() {
                 tipo: "sucesso"
             });
 
-            carregar();        // atualiza a lista
-            // Opcional: limpar o formulário após sucesso
-            // setValor(0); setTipo("Receita"); etc.
+            carregar();
 
         } catch (err: any) {
             let mensagemErro = "Erro ao criar transação. Tente novamente.";

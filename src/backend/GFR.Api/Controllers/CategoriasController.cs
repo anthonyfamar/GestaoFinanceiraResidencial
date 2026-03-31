@@ -1,4 +1,5 @@
 ﻿using GFR.Domain.Entities;
+using GFR.Domain.Enums;
 using GFR.Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 
@@ -37,6 +38,58 @@ namespace GFR.Api.Controllers
 
             _context.SaveChanges();
             return Ok("Categoria removida com sucesso.");
+        }
+
+        [HttpGet("totais")]
+        public IActionResult TotaisPorCategoria()
+        {
+            var categorias = _context.Categorias.ToList();
+            var resultado = new List<object>();
+
+            decimal totalGeralReceita = 0;
+            decimal totalGeralDespesa = 0;
+
+            //for each para cada pessoa
+            foreach (var categoria in categorias)
+            {
+                //Filtra a transação por pessoa do tipo receita e soma o valor, se não tiver nenhuma transação do tipo receita, retorna 0
+                var somaReceitas = _context.Transacoes
+                    .Where(t => t.CategoriaId == categoria.Id && t.Tipo == TipoTransacao.Receita)
+                    .Sum(t => t.Valor);
+
+                //Filtra a transação por pessoa, tipo despesa e soma o valor
+                var somaDespesas = _context.Transacoes
+                    .Where(t => t.CategoriaId == categoria.Id && t.Tipo == TipoTransacao.Despesa)
+                    .Sum(t => t.Valor);
+
+                var saldo = somaReceitas - somaDespesas;
+
+                totalGeralReceita += somaReceitas;
+                totalGeralDespesa += somaDespesas;
+
+                //monta o resultado da pessoa
+                resultado.Add(new
+                {
+                    CategoriaId = categoria.Id,
+                    Descricao = categoria.Descricao,
+                    Receitas = somaReceitas,
+                    Despesas = somaDespesas,
+                    Saldo = saldo
+                });
+            }
+
+            var totalGeral = new
+            {
+                TotalReceitas = totalGeralReceita,
+                TotalDespesas = totalGeralDespesa,
+                SaldoGeral = totalGeralReceita - totalGeralDespesa
+            };
+
+            return Ok(new
+            {
+                Categorias = resultado,
+                TotalGeral = totalGeral
+            });
         }
 
         [HttpGet]

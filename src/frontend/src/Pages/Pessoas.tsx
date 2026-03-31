@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react";
 import { api } from "../Services/api";
+import { Alerta } from "../Components/Alerta";
 
 export function Pessoas() {
     const [pessoas, setPessoas] = useState<any[]>([]);
     const [nome, setNome] = useState("");
     const [idade, setIdade] = useState(0);
+
+    const [alerta, setAlerta] = useState<{
+        mensagem: string;
+        tipo: "erro" | "sucesso" | "aviso";
+    } | null>(null);
 
     //pega os dados do backend e salva
     async function carregar() {
@@ -14,8 +20,23 @@ export function Pessoas() {
 
     //envia os dados para o backend e depois recarrega a lista
     async function criar() {
-        await api.post("/pessoas", { nome, idade });
-        carregar();
+        if (!nome || idade <= 0) {
+            setAlerta({ mensagem: "Nome e idade são obrigatórios.", tipo: "aviso" });
+            return;
+        }
+
+        try {
+            await api.post("/pessoas", { nome, idade });
+
+            setAlerta({ mensagem: "Pessoa criada com sucesso!", tipo: "sucesso" });
+            carregar();
+
+        } catch (err: any) {
+            const mensagemErro = err.response?.data?.detail
+                || "Erro ao criar pessoa.";
+
+            setAlerta({ mensagem: mensagemErro, tipo: "erro" });
+        }
     }
 
     //envia o id para o backend deletar e depois recarrega a lista
@@ -33,17 +54,24 @@ export function Pessoas() {
         <div>
             <h2>Cadastro de pessoas</h2>
 
-            <div className="form-row">
+            <div className="form-row" style={{marginBottom: "15px"} }>
                 <input placeholder="Nome" onChange={e => setNome(e.target.value)} />
                 <input type="number" placeholder="Idade" onChange={e => setIdade(Number(e.target.value))} />
                 <button className="btn-criar" onClick={criar}>Criar</button>
             </div>
 
+            {alerta && (
+                <Alerta
+                    mensagem={alerta.mensagem}
+                    tipo={alerta.tipo}
+                    onFechar={() => setAlerta(null)}
+                />
+            )}
+
             <hr />
 
             {/*lista de pessoas*/}
             <h3 className="lista">Lista</h3>
-
             <table>
                 <thead>
                     <tr>

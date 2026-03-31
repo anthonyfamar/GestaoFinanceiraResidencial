@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../Services/api";
+import { Alerta } from "../Components/Alerta";
 
 type Categoria = {
     id: number;
@@ -19,6 +20,11 @@ export function Categorias() {
         2: "Despesa",
         3: "Ambas"
     };
+
+    const [alerta, setAlerta] = useState<{
+        mensagem: string;
+        tipo: "erro" | "sucesso" | "aviso";
+    } | null>(null);
 
     function getFinalidadeTexto(finalidade: number) {
         const map: Record<number, string> = {
@@ -44,10 +50,28 @@ export function Categorias() {
     }
 
     async function criar() {
-        await api.post("/categorias", { descricao, finalidade });
-        setDescricao("");
-        setFinalidade(0);
-        carregar();
+        setAlerta(null);
+
+        if (!descricao?.trim() || finalidade === 0) {
+            setAlerta({
+                mensagem: "Preencha a descrição e selecione a finalidade.",
+                tipo: "aviso"
+            });
+            return;
+        }
+
+        try {
+            await api.post("/categorias", { descricao: descricao.trim(), finalidade });
+
+            setAlerta({ mensagem: "Categoria criada com sucesso!", tipo: "sucesso" });
+            carregar();
+
+        } catch (err: any) {
+            const mensagemErro = err.response?.data?.detail
+                || String(err.response?.data || "Erro ao criar categoria.");
+
+            setAlerta({ mensagem: mensagemErro, tipo: "erro" });
+        }
     }
 
     async function deletar(id: number) {
@@ -63,7 +87,7 @@ export function Categorias() {
         <div>
             <h2>Cadastro de categorias</h2>
 
-            <div className="form-row">
+            <div className="form-row" style={{marginBottom: "15px"} }>
                 <input placeholder="Descrição" value={descricao} onChange={e => setDescricao(e.target.value)} />
 
                 <select value={finalidade} onChange={e => setFinalidade(Number(e.target.value))}>
@@ -76,6 +100,14 @@ export function Categorias() {
 
                 <button className="btn-criar" onClick={criar}>Criar</button>
             </div>
+
+            {alerta && (
+                <Alerta
+                    mensagem={alerta.mensagem}
+                    tipo={alerta.tipo}
+                    onFechar={() => setAlerta(null)}
+                />
+            )}
 
             <hr />
 
