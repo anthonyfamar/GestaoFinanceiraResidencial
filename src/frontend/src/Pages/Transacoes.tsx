@@ -28,6 +28,10 @@ export function Transacoes() {
     const [tipo, setTipo] = useState(0);
     const [pessoaId, setPessoaId] = useState(0);
     const [categoriaId, setCategoriaId] = useState(0);
+    const tipoMap: Record<number, string> = {
+        1: "Receita",
+        2: "Despesa"
+    };
 
     async function carregar() {
         const [t, p, c] = await Promise.all([
@@ -72,9 +76,12 @@ export function Transacoes() {
 
             <input type="number" placeholder="Valor" onChange={e => setValor(Number(e.target.value))} />
 
-            <select onChange={e => setTipo(Number(e.target.value))}>
-                <option value={1}>Receita</option>
-                <option value={2}>Despesa</option>
+            <select value={tipo} onChange={e => setTipo(Number(e.target.value))}>
+                {Object.entries(tipoMap).map(([key, value]) => (
+                    <option key={key} value={key}>
+                        {value}
+                    </option>
+                ))}
             </select>
 
             <select onChange={e => setPessoaId(Number(e.target.value))}>
