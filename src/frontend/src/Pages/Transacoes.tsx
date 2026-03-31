@@ -109,13 +109,15 @@ export function Transacoes() {
                 ))}
             </select>
 
-            <button onClick={criar}>Criar</button>
+            <button className="button-criar" onClick={criar}>Criar</button>
 
             {/*lista com o botão de excluir*/}
             <ul>
                 {transacoes.map(t => (
                     <li key={t.id}>
-                        {t.valor} - {tipoMap[t.tipo] ?? "Desconhecido"}
+                        <span style={{ color: t.tipo === 1 ? "green" : "red" }}>
+                            R$ {t.valor.toFixed(2)} - {tipoMap[t.tipo] ?? "Desconhecido"}
+                        </span>
                         <button onClick={() => deletar(t.id)}>Excluir</button>
                     </li>
                 ))}

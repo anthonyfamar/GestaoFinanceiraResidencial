@@ -6,13 +6,25 @@ import { Transacoes } from './Pages/Transacoes';
 
 function App() {
     return (
-        <div>
+        <div className="container">
+
             <h1>Gestão Financeira</h1>
 
-            <Pessoas />
-            <Categorias />
-            <Transacoes />
-            <Totais />
+            <div className="card">
+                <Pessoas />
+            </div>
+
+            <div className="card">
+                <Categorias />
+            </div>
+
+            <div className="card">
+                <Transacoes />
+            </div>
+
+            <div className="card">
+                <Totais />
+            </div>
         </div>
     )
 }

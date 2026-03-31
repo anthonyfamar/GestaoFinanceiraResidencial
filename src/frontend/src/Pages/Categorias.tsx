@@ -43,7 +43,7 @@ export function Categorias() {
 
     return (
         <div>
-            <h2>Categorias</h2>
+            <h2>Cadastro de categorias</h2>
 
             <input
                 placeholder="Nome"
@@ -57,7 +57,7 @@ export function Categorias() {
                     </option>
                 ))}
             </select>
-            <button onClick={criar}>Criar</button>
+            <button className="button-criar" onClick={criar}>Criar</button>
 
             <ul>
                 {categorias.map(c => (

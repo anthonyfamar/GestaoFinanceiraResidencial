@@ -31,21 +31,41 @@ export function Pessoas() {
 
     return (
         <div>
-            <h2>Pessoas</h2>
+            <h2>Cadastro de pessoas</h2>
 
-            <input placeholder="Nome" onChange={e => setNome(e.target.value)} />
-            <input type="number" placeholder="Idade" onChange={e => setIdade(Number(e.target.value))} />
-            <button onClick={criar}>Criar</button>
+            <div className="form-row">
+                <input placeholder="Nome" onChange={e => setNome(e.target.value)} />
+                <input type="number" placeholder="Idade" onChange={e => setIdade(Number(e.target.value))} />
+                <button className="btn-criar" onClick={criar}>Criar</button>
+            </div>
+
+            <hr />
 
             {/*lista de pessoas*/}
-            <ul>
-                {pessoas.map(p => (
-                    <li key={p.id}>
-                        {p.nome} - {p.idade}
-                        <button onClick={() => deletar(p.id)}>Excluir</button>
-                    </li>
-                ))}
-            </ul>
+            <h3 className="lista">Lista</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {pessoas.map(p => (
+                        <tr key={p.id}>
+                            <td>{p.nome}</td>
+                            <td>{p.idade}</td>
+                            <td>
+                                <button className="btn-editar">✎</button>
+                                <button className="btn-deletar" onClick={() => deletar(p.id)}>✖</button>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
     );
 }
