@@ -95,3 +95,60 @@ th, td {
     background: #d1ecf1;
     color: #0c5460;
 }
+
+.app-layout {
+    min-height: 100vh;
+    background: #f0f2f5;
+}
+
+.app-header {
+    background: white;
+    padding: 8px 32px;    
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    min-height: 48px;   
+}
+
+.app-titulo {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    color: #1a1a1a;
+    white-space: nowrap;
+}
+
+.app-nav {
+    display: flex;
+    gap: 4px;
+}
+
+.nav-btn {
+    background: transparent;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    transition: background 0.15s, color 0.15s;
+}
+
+    .nav-btn:hover {
+        background: #f0f2f5;
+        color: #1a1a1a;
+    }
+
+.nav-btn-ativo {
+    background: #e8f0fe;
+    color: #0057d9;
+}
+
+.app-main {
+    max-width: 860px;
+    margin: 32px auto;
+    padding: 0 24px;
+}
