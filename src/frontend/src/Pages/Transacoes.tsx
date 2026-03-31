@@ -25,7 +25,7 @@ export function Transacoes() {
     const [categorias, setCategorias] = useState<Categoria[]>([]);
 
     const [valor, setValor] = useState(0);
-    const [tipo, setTipo] = useState(0);
+    const [tipo, setTipo] = useState(1);
     const [pessoaId, setPessoaId] = useState(0);
     const [categoriaId, setCategoriaId] = useState(0);
     const tipoMap: Record<number, string> = {
@@ -103,7 +103,7 @@ export function Transacoes() {
             <ul>
                 {transacoes.map(t => (
                     <li key={t.id}>
-                        {t.valor} - {t.tipo === 1 ? "Receita" : "Despesa"}
+                        {t.valor} - {tipoMap[t.tipo] ?? "Desconhecido"}
                         <button onClick={() => deletar(t.id)}>Excluir</button>
                     </li>
                 ))}
