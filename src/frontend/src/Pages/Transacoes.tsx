@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../Services/api";
+import { Alerta } from "../Components/Alerta";
 
 //aqui é onde define os tipos de dados que vem do backend
 type Pessoa = {
@@ -38,6 +39,11 @@ export function Transacoes() {
         2: "Despesa"
     };
 
+    const [alerta, setAlerta] = useState < {
+        mensagem: string;
+        tipo: "erro" | "sucesso" | "aviso";
+    } | null>(null);
+
     //Faz requisição para o backend pegando os dados
     async function carregar() {
         const [t, p, c] = await Promise.all([
@@ -53,21 +59,53 @@ export function Transacoes() {
     }
 
     async function criar() {
+        // Validação inicial
+        setAlerta(null);   // limpa alerta anterior
+
         if (!pessoaId || !categoriaId) {
-            alert("Selecione pessoa e categoria");
+            setAlerta({ mensagem: "Selecione uma pessoa e uma categoria.", tipo: "aviso" });
             return;
         }
 
-        //envia os dados para o backend
-        await api.post("/transacoes", {
-            valor,
-            tipo,
-            pessoaId,
-            categoriaId
-        });
+        try {
+            await api.post("/transacoes", {
+                valor,
+                tipo,
+                pessoaId,
+                categoriaId
+            });
 
-        //aqui recarregaa a lista atualizada
-        carregar();
+            // Sucesso
+            setAlerta({
+                mensagem: "Transação criada com sucesso!",
+                tipo: "sucesso"
+            });
+
+            carregar();        // atualiza a lista
+            // Opcional: limpar o formulário após sucesso
+            // setValor(0); setTipo("Receita"); etc.
+
+        } catch (err: any) {
+            let mensagemErro = "Erro ao criar transação. Tente novamente.";
+
+            if (err.response?.data) {
+                if (err.response.data.detail) {
+                    // Vem do nosso GlobalExceptionHandler (ProblemDetails)
+                    mensagemErro = err.response.data.detail;
+                }
+                else if (typeof err.response.data === "string") {
+                    mensagemErro = err.response.data;
+                }
+                else if (err.response.data.message) {
+                    mensagemErro = err.response.data.message;
+                }
+            }
+
+            setAlerta({
+                mensagem: mensagemErro,
+                tipo: "erro"
+            });
+        }
     }
 
     async function deletar(id: number) {
@@ -83,6 +121,13 @@ export function Transacoes() {
     return (
         <div>
             <div className="card-transacoes">
+                {alerta && (
+                    <Alerta
+                        mensagem={alerta.mensagem}
+                        tipo={alerta.tipo}
+                        onFechar={() => setAlerta(null)}
+                    />
+                )}
                 <h2>Nova transação</h2>
                 {/*form para preencher*/}
                 <div className="form-row" style={{ marginBottom: "15px" }}>
