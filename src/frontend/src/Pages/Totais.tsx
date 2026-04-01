@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../Services/api";
+import { GraficoPizza } from "../Components/DistribuicaoDespesas";
 
 export function Totais() {
     const [totaisPessoas, setTotaisPessoas] = useState<any>(null);
@@ -178,6 +179,7 @@ export function Totais() {
                     </tr>
                 </tbody>
             </table>
+            <GraficoPizza dados={totaisCategorias?.categorias || []} />
         </div>
     );
 }
