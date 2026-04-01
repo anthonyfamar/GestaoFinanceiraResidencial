@@ -179,7 +179,9 @@ export function Totais() {
                     </tr>
                 </tbody>
             </table>
-            <GraficoPizza dados={totaisCategorias?.categorias || []} />
+            <div style={{ marginTop: "30px" }}>
+                <GraficoPizza dados={totaisCategorias?.categorias || []} />
+            </div>
         </div>
     );
 }
