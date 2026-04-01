@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GFR.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ffa0d89b162e4b62bd20bf7af10d493f215b462")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94668b5e41ee54e8b5bc1db93291b138a24bd71a")]
 [assembly: System.Reflection.AssemblyProductAttribute("GFR.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GFR.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
